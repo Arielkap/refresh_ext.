@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Refresher</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+    }
+    
+    h3 {
+      text-align: center;
+      color: #1d1d1f;
+      margin: 0 0 20px 0;
+      font-weight: 600;
+    }
+    
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #d2d2d7;
+      border-radius: 8px;
+      background: white;
+      font-size: 14px;
+    }
+    
+    .time-controls {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #007aff;
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    button:hover {
+      background: #0063cc;
+    }
+    
+    button:disabled {
+      background: #d2d2d7;
+      cursor: not-allowed;
+    }
+    
+    #stop-btn {
+      background: #ff3b30;
+    }
+    
+    #stop-btn:hover {
+      background: #cc2a22;
+    }
+    
+    #timer {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 15px 0;
+      color: #1d1d1f;
+    }
+    
+    #status {
+      text-align: center;
+      margin: 20px 0;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #1d1d1f;
+      background: #f0f0f0;
+      border-radius: 8px;
+      border: 1px solid #d2d2d7;
+    }
+
+    .status-ready {
+      background: #e8f0fe;
+      border-color: #c2dbfe;
+      color: #1a73e8;
+    }
+  </style>
+</head>
+<body>
+  <h3>Tab Refresher</h3>
+  
+  <div class="time-controls">
+    <select id="tab-select">
+      <option value="">Select a tab to refresh</option>
+    </select>
+    
+    <select id="interval-select">
+      <option value="5">5 seconds</option>
+      <option value="15">15 seconds</option>
+      <option value="30">30 seconds</option>
+      <option value="60">1 minute</option>
+      <option value="900">15 minutes</option>
+      <option value="3600">1 hour</option>
+      <option value="custom">Custom...</option>
+    </select>
+    
+    <div id="custom-time" style="display: none;">
+      <input type="number" id="custom-seconds" min="1" value="60" placeholder="Custom time in seconds">
+    </div>
+  </div>
+  
+  <div id="timer">00:00</div>
+  
+  <div class="buttons">
+    <button id="start-btn">Start Auto Refresh</button>
+    <button id="stop-btn" disabled>Stop Auto Refresh</button>
+    <button id="refresh-btn">Refresh Now</button>
+  </div>
+  
+  <div id="status" class="status-ready">READY</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
