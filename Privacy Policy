@@ -1,0 +1,23 @@
+Privacy Policy for Tab Refresher
+Last Updated: 06/01/2025
+
+This Privacy Policy explains how Tab Refresher ("the Extension") handles user data. Your privacy is important to us, and we are committed to protecting it.
+
+1. Data Collection and Usage
+The Extension does not collect, store, or transmit any personal or sensitive user data. The Extension’s sole function is to refresh the active browser tab at specified intervals. It does not interact with or access any content on the web pages, nor does it track user activity.
+
+2. Data Sharing
+The Extension does not share any user data with third parties, as it does not collect or store any data.
+
+3. Permissions
+The Extension requires the following permissions to function:
+
+tabs permission: This permission is required to refresh the active browser tab. The Extension does not access or interact with the content of the tabs.
+
+storage permission: This permission is used to store user preferences (e.g., refresh interval) locally on the user’s device. No data is transmitted outside the user’s device.
+
+4. Changes to This Privacy Policy
+We may update this Privacy Policy from time to time. Any changes will be posted on this page, and the "Last Updated" date will be revised accordingly. We encourage you to review this Privacy Policy periodically.
+
+5. Contact Us
+If you have any questions or concerns about this Privacy Policy or the Extension, please contact us at arielkapitkowski@gmail.com.
